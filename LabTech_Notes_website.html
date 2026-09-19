@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LabTech Notes | Lab Technician Study Website</title>
+<meta name="description" content="Lab Technician students के लिए Notes, MCQs, Viva Questions, Practical और useful calculators.">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f7fb;color:#18212f;line-height:1.6}
+header{background:#0b6bcb;color:white;position:sticky;top:0;z-index:20;box-shadow:0 2px 10px #0002}
+.nav{max-width:1100px;margin:auto;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.logo{font-size:22px;font-weight:800}
+nav{display:flex;gap:8px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;padding:7px 10px;border-radius:8px;font-size:14px}
+nav a:hover{background:#ffffff22}
+.hero{background:linear-gradient(135deg,#0b6bcb,#11a7a0);color:white;padding:65px 18px}
+.hero-inner{max-width:1100px;margin:auto}
+.hero h1{font-size:42px;margin:0 0 10px}
+.hero p{font-size:18px;max-width:700px}
+.btn{display:inline-block;border:0;border-radius:10px;padding:12px 18px;background:#fff;color:#075cae;font-weight:700;text-decoration:none;cursor:pointer}
+section{max-width:1100px;margin:auto;padding:45px 18px}
+h2{font-size:30px;margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:white;border-radius:14px;padding:20px;box-shadow:0 3px 15px #00000012}
+.card h3{margin-top:0}
+.icon{font-size:32px}
+.search{width:100%;padding:14px;border:1px solid #ccd4df;border-radius:10px;font-size:16px;margin-bottom:20px}
+.note{border-left:5px solid #0b6bcb}
+details{background:white;border-radius:10px;margin:10px 0;padding:14px 16px;box-shadow:0 2px 8px #0000000d}
+summary{font-weight:700;cursor:pointer}
+.quiz-q{margin-bottom:18px}
+.option{display:block;margin:7px 0;padding:9px 10px;border:1px solid #d7dde7;border-radius:8px;cursor:pointer}
+.option:hover{background:#eef6ff}
+#quizResult{font-weight:700;margin-top:15px}
+input[type=number]{width:100%;padding:12px;border:1px solid #ccd4df;border-radius:8px;margin:6px 0 12px}
+button.primary{background:#0b6bcb;color:white;border:0;padding:11px 16px;border-radius:9px;font-weight:700;cursor:pointer}
+footer{background:#172033;color:#dbe4f0;text-align:center;padding:30px 18px}
+.small{font-size:13px;color:#667085}
+.hide{display:none}
+@media(max-width:700px){
+ .hero h1{font-size:32px}
+ nav{display:none}
+ .nav{justify-content:center}
+ section{padding:35px 14px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="nav">
+<div class="logo">🧪 LabTech Notes</div>
+<nav>
+<a href="#home">Home</a>
+<a href="#notes">Notes</a>
+<a href="#mcq">MCQ</a>
+<a href="#viva">Viva</a>
+<a href="#practical">Practical</a>
+<a href="#tools">Tools</a>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="hero-inner">
+<h1>🧪 LabTech Notes</h1>
+<p>Lab Technician students के लिए आसान भाषा में Notes, MCQs, Viva Questions, Practical Topics और useful study tools.</p>
+<a class="btn" href="#notes">📚 Notes पढ़ें</a>
+</div>
+</section>
+
+<section>
+<h2>📚 Website में क्या मिलेगा?</h2>
+<div class="grid">
+<div class="card"><div class="icon">📝</div><h3>Lab Technician Notes</h3><p>Topic-wise revision material और concepts.</p></div>
+<div class="card"><div class="icon">❓</div><h3>MCQ Practice</h3><p>Exam practice के लिए interactive questions.</p></div>
+<div class="card"><div class="icon">🎤</div><h3>Viva Questions</h3><p>Practical और viva preparation के लिए questions.</p></div>
+<div class="card"><div class="icon">🔬</div><h3>Practical</h3><p>Common laboratory practical topics की revision.</p></div>
+</div>
+</section>
+
+<section id="notes">
+<h2>📝 Notes</h2>
+<input class="search" id="searchBox" placeholder="🔎 Notes में topic खोजें..." oninput="searchNotes()">
+<div class="grid" id="noteGrid">
+<div class="card note note-card"><h3>🩸 Hematology</h3><p>Blood, blood cells, hemoglobin, RBC, WBC और platelets जैसे basic topics की revision.</p><p class="small">अपनी syllabus-specific सामग्री यहाँ जोड़ें।</p></div>
+<div class="card note note-card"><h3>🦠 Microbiology</h3><p>Microorganisms, sterilization, culture और laboratory safety के basic concepts.</p><p class="small">अपनी syllabus-specific सामग्री यहाँ जोड़ें।</p></div>
+<div class="card note note-card"><h3>🧪 Clinical Biochemistry</h3><p>Glucose, proteins, enzymes और common biochemical investigations की basic revision.</p><p class="small">अपनी syllabus-specific सामग्री यहाँ जोड़ें।</p></div>
+<div class="card note note-card"><h3>🔬 Pathology</h3><p>Specimen collection, processing और common laboratory procedures के study topics.</p><p class="small">अपनी syllabus-specific सामग्री यहाँ जोड़ें।</p></div>
+</div>
+</section>
+
+<section id="mcq">
+<h2>❓ MCQ Practice</h2>
+<div class="card">
+<div class="quiz-q"><b>1. Hemoglobin मुख्य रूप से किस cell में पाया जाता है?</b>
+<label class="option"><input type="radio" name="q1" value="a"> RBC</label>
+<label class="option"><input type="radio" name="q1" value="b"> Platelet</label>
+<label class="option"><input type="radio" name="q1" value="c"> Plasma</label>
+</div>
+<div class="quiz-q"><b>2. Microscope का उपयोग किसलिए किया जाता है?</b>
+<label class="option"><input type="radio" name="q2" value="a"> केवल वजन मापने के लिए</label>
+<label class="option"><input type="radio" name="q2" value="b"> सूक्ष्म वस्तुओं/जीवों को देखने के लिए</label>
+<label class="option"><input type="radio" name="q2" value="c"> तापमान मापने के लिए</label>
+</div>
+<div class="quiz-q"><b>3. Laboratory में PPE का मुख्य उद्देश्य क्या है?</b>
+<label class="option"><input type="radio" name="q3" value="a"> Decoration</label>
+<label class="option"><input type="radio" name="q3" value="b"> सुरक्षा</label>
+<label class="option"><input type="radio" name="q3" value="c"> Sample को रंगना</label>
+</div>
+<button class="primary" onclick="checkQuiz()">Check Answers</button>
+<div id="quizResult"></div>
+</div>
+</section>
+
+<section id="viva">
+<h2>🎤 Viva Questions</h2>
+<details><summary>Microscope क्या है?</summary><p>Microscope एक optical instrument है जिसका उपयोग बहुत छोटी वस्तुओं को magnify करके देखने के लिए किया जाता है.</p></details>
+<details><summary>Laboratory safety क्यों जरूरी है?</summary><p>Personnel, samples और environment को संभावित biological, chemical और physical hazards से सुरक्षित रखने के लिए.</p></details>
+<details><summary>Specimen labeling क्यों महत्वपूर्ण है?</summary><p>सही patient/sample identification बनाए रखने और गलत reporting के risk को कम करने के लिए.</p></details>
+<details><summary>PPE का अर्थ क्या है?</summary><p>PPE का अर्थ Personal Protective Equipment है, जैसे gloves, mask, gown और eye protection.</p></details>
+</section>
+
+<section id="practical">
+<h2>🔬 Practical Topics</h2>
+<div class="grid">
+<div class="card"><h3>🧤 Laboratory Safety</h3><p>Hand hygiene, PPE, waste handling और safe work practices.</p></div>
+<div class="card"><h3>🧫 Specimen Handling</h3><p>Collection, labeling, transport और basic processing principles.</p></div>
+<div class="card"><h3>🔬 Microscope</h3><p>Parts, focusing और basic care की revision.</p></div>
+<div class="card"><h3>🧼 Sterilization</h3><p>Common sterilization/disinfection concepts और precautions.</p></div>
+</div>
+<p class="small">महत्वपूर्ण: Practical procedures हमेशा अपने institute की SOPs, प्रशिक्षक और लागू safety guidelines के अनुसार करें.</p>
+</section>
+
+<section id="tools">
+<h2>🧮 Student Tools</h2>
+<div class="grid">
+<div class="card">
+<h3>Percentage Calculator</h3>
+<input type="number" id="obtained" placeholder="Obtained marks">
+<input type="number" id="total" placeholder="Total marks">
+<button class="primary" onclick="calcPercent()">Calculate</button>
+<p id="percentResult"></p>
+</div>
+<div class="card">
+<h3>Attendance Calculator</h3>
+<input type="number" id="present" placeholder="Classes attended">
+<input type="number" id="classes" placeholder="Total classes">
+<button class="primary" onclick="calcAttendance()">Calculate</button>
+<p id="attendanceResult"></p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>📢 About LabTech Notes</h2>
+<div class="card">
+<p>LabTech Notes एक educational study-resource website का template है। यहाँ आप अपने syllabus के अनुसार verified और original study material जोड़ सकते हैं.</p>
+<p class="small">Medical/health-related information को educational purpose के लिए रखें; diagnosis या treatment advice के रूप में प्रस्तुत न करें.</p>
+</div>
+</section>
+</main>
+
+<footer>
+<p>🧪 <b>LabTech Notes</b></p>
+<p>Notes • MCQs • Viva • Practical • Student Tools</p>
+<p class="small">© 2026 LabTech Notes. All rights reserved.</p>
+</footer>
+
+<script>
+function checkQuiz(){
+ let score=0;
+ if(document.querySelector('input[name="q1"]:checked')?.value==="a") score++;
+ if(document.querySelector('input[name="q2"]:checked')?.value==="b") score++;
+ if(document.querySelector('input[name="q3"]:checked')?.value==="b") score++;
+ document.getElementById("quizResult").textContent="आपका Score: "+score+"/3";
+}
+function calcPercent(){
+ const a=parseFloat(document.getElementById("obtained").value);
+ const b=parseFloat(document.getElementById("total").value);
+ document.getElementById("percentResult").textContent=(b>0 && a>=0) ? "Percentage: "+((a/b)*100).toFixed(2)+"%" : "सही marks डालें।";
+}
+function calcAttendance(){
+ const a=parseFloat(document.getElementById("present").value);
+ const b=parseFloat(document.getElementById("classes").value);
+ document.getElementById("attendanceResult").textContent=(b>0 && a>=0) ? "Attendance: "+((a/b)*100).toFixed(2)+"%" : "सही classes डालें।";
+}
+function searchNotes(){
+ const term=document.getElementById("searchBox").value.toLowerCase();
+ document.querySelectorAll(".note-card").forEach(card=>{
+   card.classList.toggle("hide", !card.innerText.toLowerCase().includes(term));
+ });
+}
+</script>
+</body>
+</html>
